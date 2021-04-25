@@ -8,6 +8,8 @@
 #include "led_task.h"
 
 #define BLINK_GPIO CONFIG_BLINK_GPIO
+#define BLINK_ON_LENGTH_MS CONFIG_BLINK_ON_LENGTH_MS
+#define BLINK_OFF_LENGTH_MS CONFIG_BLINK_OFF_LENGTH_MS
 
 static const char *TAG = "BLINK";
 
@@ -19,10 +21,10 @@ static void led_task(void *_)
     {
         ESP_LOGI(TAG, "Turning on the LED");
         gpio_set_level(BLINK_GPIO, 1);
-        vTaskDelay(500 / portTICK_PERIOD_MS);
+        vTaskDelay(BLINK_ON_LENGTH_MS / portTICK_PERIOD_MS);
         ESP_LOGI(TAG, "Turning off the LED");
         gpio_set_level(BLINK_GPIO, 0);
-        vTaskDelay(500 / portTICK_PERIOD_MS);
+        vTaskDelay(BLINK_OFF_LENGTH_MS / portTICK_PERIOD_MS);
     }
 }
 
