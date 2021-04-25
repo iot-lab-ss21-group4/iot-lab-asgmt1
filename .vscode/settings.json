@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "freertos.h": "c",
+        "gpio.h": "c"
+    },
+    "idf.portWin": "COM5",
+    "idf.flashType": "UART"
+}
