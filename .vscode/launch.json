@@ -9,9 +9,6 @@
             "type": "espidf",
             "request": "launch",
             "preLaunchTask": "adapter",
-            // "env": {
-            //     "IDF_PATH": "c:\\Users\\deniz\\esp\\esp-idf"
-            // },
         }
     ]
 }

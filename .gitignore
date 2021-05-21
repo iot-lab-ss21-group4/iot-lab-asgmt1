@@ -1,6 +1,60 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/vscode,cmake,ninja
-# Edit at https://www.toptal.com/developers/gitignore?templates=vscode,cmake,ninja
+# Created by https://www.toptal.com/developers/gitignore/api/cmake,vscode,c
+# Edit at https://www.toptal.com/developers/gitignore?templates=cmake,vscode,c
+
+### C ###
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
 
 ### CMake ###
 CMakeLists.txt.user
@@ -15,14 +69,11 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 CMakeUserPresets.json
+/build/
 
 ### CMake Patch ###
 # External projects
 *-prefix/
-
-### Ninja ###
-.ninja_deps
-.ninja_log
 
 ### vscode ###
 .vscode/*
@@ -30,9 +81,18 @@ CMakeUserPresets.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-!.vscode/c_cpp_properties.json
 *.code-workspace
+*.log
 
-# End of https://www.toptal.com/developers/gitignore/api/vscode,cmake,ninja
+# End of https://www.toptal.com/developers/gitignore/api/cmake,vscode,c
 
-/build/
+.DS_Store
+
+# eclipse setting
+.settings
+.project
+.cproject
+/sdkconfig
+*.old
+
+/.cache/
